@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Praktična veterina ... Moja treća web stranica</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script>
+		function obojiPolje(element,boja)
+		{
+	        //alert(123);
+			element.style="background-color:"+boja;
+		}
+		function validacija()
+		{
+			var ime=document.getElementById("ime").value;
+			var prezime=document.getElementById("prezime").value;
+			var email=document.getElementById("email").value;
+			var poruka=document.getElementById("poruka").value;
+			
+			if(ime=="")
+			{
+			   alert("ime je obavezno polje");
+			   return false;
+			}
+			if(prezime=="")
+			{
+			   alert("prezime je obavezno polje");
+			   return false;
+			}
+			if(email=="")
+			{
+			   alert("email je obavezno polje");
+			   return false;
+			}
+			if(poruka=="")
+			{
+			   alert("unesite poruku");
+			   return false;
+			}
+			return true;
+		}
+		</script>
+	</head>
+	
+	<body>
+	<a name="top"></a> <!-- vraćanje na vrh stranice -->
+	<div id="mainWrapper">
+		<header id="header">
+			<div id="logo"><img src='veterinary_logo.jpg' width='168' height='150'/></div>
+			<div id='sloganPravi'><br><br><p>Sve za vaše kućne ljubimce na jednom mestu</p></div>
+		</header>
+		<nav id="navigation"><a href="index.html">Home</a> <span>::</span> <a href="prakticna_veterina.html">Praktična veterina</a> <span>::</span> <a href="buve_dosadne_napasti_vasih_ljubimaca.html">Buve</a> <span>::</span> 
+				<a href="krpelji_opasnost_vasih_ljubimaca.html">Krpelji</a>  <span>::</span> <a href="o_nama.html">O nama</a> <span>::</span> <a href="kontakt.html">Kontakt</a></nav>
+		<div id="wrap">
+			<div id="sidebar">
+				<div class="btn-group">
+					<a href="http://kinoac.edu.rs/rasepasa/podela-rasa/" target="_blank" class="button"><em>Vrste pasa</em></a>
+					<a href="http://www.felisserbica.rs/rase-macaka/" target="_blank" class="button"><em>Vrste mačaka</em></a>
+					<a href="https://citymagazine.rs/clanak/najgenijalniji-marketinski-potezi-vlasnika-prodavnica" target="_blank" class="button"><em>Neobični ljubimci</em></a>
+					<a href="https://www.planplus.rs/adresar/beograd/veterinarske-ambulante" target="_blank" class="button"><em>Veterinarske ambulante</em></a>
+				</div>
+			</div>
+		
+			<div id="mainContent">
+				<h1>Praktična veterina :</h1>
+				<h2><em>Kontakt:</em></h2>
+				<div style="text-align:center">Možete nas slobodno kontaktirati na <a href="mailto:youremailaddress">Email</a> u cilju informisanja ili poboljšanja našeg rada.</div>
+				</br>
+				<a href="http://www.facebook.com/ace.mladic" target="_blank"><img src="image.jpg" width=300px/></a>
+				</br> <!-- Ubacih prazano da odvojim slike medjusobno-->
+				<form id="kontakt" name="kontakt" method="post" action="">
+					Ime:<br>
+					<input type="text" name="ime" id="ime" onfocus="obojiPolje(this,'green')" onblur="obojiPolje(this,'white')"/><br><br>
+					Prezime:<br>
+					<input type="text" id="prezime" onfocus="obojiPolje(this,'green')" onblur="obojiPolje(this,'white')" name="prezime"/><br><br>
+					Email:<br>
+					<input type="email" id="email" onfocus="obojiPolje(this,'green')" onblur="obojiPolje(this,'white')" name="email"/><br><br>
+					Poruka:<br>
+					<textarea name="poruka" id="poruka" onfocus="obojiPolje(this,'green')" onblur="obojiPolje(this,'white')"></textarea><br><br>
+					<input type="button" id="pošalji" value="pošalji" onclick="return validacija()"><br><br>
+				</form>
+				<div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Mlade%20Bosne%2018%20Belgrade&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Google Maps Generator by <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+				<!--<p></p> Ubacih prazan paragraf da odvojim slike medjusobno-->
+				<div style="text-align:center;margin-top:10px"><a href="#top">Vrati se na vrh stranice</a></div> <!--vraćanje na vrh stranice-->
+			</div>
+			
+		</div>
+		<footer id="footer">
+			<div style="margin-top:20px"><a href="index.html">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="prakticna_veterina.html">Praktična veterina</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="buve_dosadne_napasti_vasih_ljubimaca.html">Buve</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="krpelji_opasnost_vasih_ljubimaca.html">Krpelji</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="o_nama.html">O nama</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="kontakt.html">Kontakt</a>
+			</br> 
+			<span><em>© Copyright 2019. All right reserved. Tailored by Aleksandar Tomović.</em></span></div>
+		</footer>
+	</div>
+	</body>
+	
+
+</html>
